@@ -70,6 +70,11 @@ body {
     text-align: center;
     margin-bottom: 20px;
   }
+
+  #sobreNosotros {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* Estilos específicos de secciones y elementos */
@@ -134,10 +139,10 @@ header .contratarNegro:hover {
 
 header .contratar:hover {
   color: var(--black);
-  background: #ffffff; 
+  background: #ffffff;
 }
 
-.tarjeta .contratar{
+.tarjeta .contratar {
   font-size: 16px;
   font-weight: 400;
 }
@@ -195,22 +200,23 @@ a:visited {
   justify-content: center;
 }
 
-#sobreNosotros{
-  height: 75vh;
-  max-height: 700px;
+#sobreNosotros {
+  height: auto;
+  max-height: 900px;
   width: 100%;
+  padding: 2em;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-#sobreNosotros h2{
-  text-decoration:underline 2px;
+#sobreNosotros h2 {
+  text-decoration: underline 2px;
   text-decoration-skip-ink: none;
-  text-underline-offset: 7px; 
+  text-underline-offset: 7px;
 }
 
-#sobreNosotros p{
+#sobreNosotros p {
   color: var(--charcoal);
   font-weight: 300;
   max-width: 500px;
@@ -308,7 +314,9 @@ label {
   color: var(--white);
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   color: var(--white);
 }
 
@@ -350,7 +358,7 @@ form textarea {
 
 /* Estilos para botones de envío en formularios */
 form input[type="submit"] {
-  background-color:var(--charcoal);
+  background-color: var(--charcoal);
   color: var(--butter);
   border: 1px var(--gold) solid;
   padding: 10px 15px;
