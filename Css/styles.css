@@ -323,8 +323,9 @@ form textarea {
 
 /* Estilos para botones de envío en formularios */
 form input[type="submit"] {
-  background-color: #4caf50;
-  color: white;
+  background-color:var(--charcoal);
+  color: var(--butter);
+  border: 1px var(--gold) solid;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
