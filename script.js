@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
             logo.src = "./Imagenes/Logo white.png";
         }
 
-        if(scrollY > 650) {
+        if(scrollY > 500) {
             header.style.borderBottom = '2px solid var(--butter)'; 
         }
         else{
