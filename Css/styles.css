@@ -115,6 +115,23 @@ header .contratar:hover {
   text-decoration: none;
 }
 
+header .contratarNegro {
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: var(--black);
+  border: solid var(--black) 1px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header .contratarNegro:hover {
+  transition: ease 0.3s;
+  color: var(--butter);
+  background: var(--black);
+  text-decoration: none;
+}
+
 footer {
   height: 120px;
   background-color: green;
@@ -167,10 +184,13 @@ a:visited {
 }
 
 #servicios {
-  height: 130vh;
+  height: auto;
+  min-height: 600px;
+  max-height: 1400px;
   background-color: var(--black);
   flex-direction: column;
   align-items: center;
+  padding: 2em;
 }
 
 .tarjetas {
@@ -236,6 +256,82 @@ a:visited {
   height: 70vh;
 }
 
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
 label {
   color: var(--white);
+}
+
+input, select, textarea{
+  color: var(--white);
+}
+
+input {
+  height: 30px;
+  max-height: 30px;
+  width: 10rem;
+  background-color: transparent;
+  border: 1px gray solid;
+  margin: 5px;
+}
+
+input::placeholder{
+  color: gray;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form input[type="text"],
+form input[type="mail"],
+form input[type="tel"],
+form select,
+form input[type="date"],
+form input[type="time"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+form textarea {
+  resize: none;
+}
+
+form input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+select option{
+  color: var(--charcoal);
+}
+
+form div input[type="radio"] {
+  margin-right: 5px;
 }

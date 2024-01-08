@@ -21,7 +21,7 @@
   <body>
     <div class="container">
       <header>
-        <img src="./Imagenes/Logo white.png" alt="Logo" />
+        <img src="./Imagenes/Logo white.png" alt="Logo" id="logo"/>
         <nav>
           <ul>
             <li><a href="#inicio">Inicio</a></li>
@@ -97,11 +97,14 @@
             </div>
           </div>
         </section>
-        <section id="opiniones"></section>
+        <section id="opiniones">
+
+        </section>
         <section id="contacto">
           <form action="procesar_formulario.php" method="post">
-            <div>
-              <input
+              <div class="column">
+                <div class="row">
+                <input
                 type="text"
                 id="nombre"
                 name="nombre"
@@ -114,9 +117,9 @@
                 name="apellido"
                 placeholder="Apellido"
                 required
-              />
-            </div>
-            <div>
+                />
+              </div>
+            <div class="row">
               <input
                 type="tel"
                 id="telefono"
@@ -124,6 +127,7 @@
                 placeholder="Teléfono"
                 required
               />
+              <input type="mail" name="email" id="email" placeholder="Correo electrónico">
             </div>
             <div>
               <label for="tipoEvento">Tipo de Evento:</label>
@@ -133,11 +137,13 @@
                 <option value="fiestaPrivada">Fiesta Privada</option>
                 <option value="empresarial">Empresarial</option>
               </select>
+            </div>
+          </div>
 
               <label for="servicio">Servicio:</label>
               <input
-                type="radio"
-                id="bartender"
+              type="radio"
+              id="bartender"
                 name="servicio"
                 value="bartender"
                 required
@@ -151,8 +157,7 @@
                 required
               />
               <label for="barraLibre">Barra Libre</label>
-            </div>
-            <div>
+            <div class="row">
               <label for="dia">Día:</label>
               <input type="date" id="dia" name="dia" required />
 
@@ -162,7 +167,7 @@
 
             <label for="notas">Notas:</label>
             <textarea id="notas" name="notas"></textarea>
-
+            
             <input type="submit" value="Enviar" />
           </form>
         </section>
