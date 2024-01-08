@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Via Eventos</title>
+    <link href="./Css/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./Imagenes/Logo white.png" alt="Logo" />
+        <nav>
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#opiniones">Opiniones</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <a href="#contacto">
+          <div class="contratar">Contratanos</div>
+        </a>
+      </header>
+      <main>
+        <section id="inicio" class="responsive-text">
+          <h1>¡Celebra a lo grande!</h1>
+        </section>
+        <section id="servicios" class="responsive-section">
+          <h2>Servicios</h2>
+          <p>
+            Descubre la excelencia de nuestros servicios, donde la barra libre
+            abarca desde opciones clásicas hasta propuestas exclusivas. Nuestros
+            expertos bartenders, con acceso completo a una variada selección de
+            licores, despliegan su destreza para crear experiencias únicas en
+            cada evento. Nos comprometemos a ofrecer un servicio refinado y
+            memorable que cautiva a los invitados, brindando un toque distintivo
+            a cada celebración.
+          </p>
+          <div class="tarjetas container">
+            <div class="tarjeta">
+              <div>
+                <img
+                  src="https://img.freepik.com/fotos-premium/barra-bar-clasico-botellas-fondo-borroso-copie-espacio-o-espacio-texto-colorido-fondo-desenfocado-restaurante-o-cafeteria-cerca_158001-1095.jpg?size=626&ext=jpg&ga=GA1.1.1687694167.1703289600&semt=ais"
+                  alt="Barra"
+                  class="responsive-img"
+                />
+              </div>
+              <div>
+                <h3>Barra libre</h3>
+                <p>
+                  Nuestro servicio de barra libre ofrece experiencias únicas con
+                  una amplia variedad de bebidas, desde la clásica selección que
+                  incluye cócteles tradicionales hasta la exclusiva carta deluxe
+                  con destilados premium y creaciones expertas. Satisfacemos
+                  todos los gustos, creando momentos memorables en cada evento.
+                </p>
+              </div>
+              <a href="#contacto">
+                <div class="contratar">Contratar</div>
+              </a>
+            </div>
+
+            <div class="tarjeta">
+              <div>
+                <img
+                  src="https://t3.ftcdn.net/jpg/03/32/90/02/360_F_332900228_GuKd5nAhZDXXQo9V7FroTvGucFruIXLP.jpg"
+                  alt="Bartender"
+                  class="responsive-img"
+                />
+              </div>
+              <div>
+                <h3>Bartender</h3>
+                <p>
+                  Nuestro servicio de bartender ofrece una experiencia de
+                  cócteles incomparable. Con acceso completo a una amplia gama
+                  de licores y mezcladores, nuestros bartenders expertos
+                  deleitarán a tus invitados con creaciones únicas y sabores
+                  excepcionales, brindando momentos inolvidables en cada sorbo.
+                </p>
+              </div>
+              <a href="#contacto">
+                <div class="contratar">Contratar</div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section id="opiniones"></section>
+        <section id="contacto">
+          <form action="procesar_formulario.php" method="post">
+            <div>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Nombre"
+                required
+              />
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                placeholder="Apellido"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Teléfono"
+                required
+              />
+            </div>
+            <div>
+              <label for="tipoEvento">Tipo de Evento:</label>
+              <select id="tipoEvento" name="tipoEvento" required>
+                <option value="cumpleanos">Cumpleaños</option>
+                <option value="casamiento">Casamiento</option>
+                <option value="fiestaPrivada">Fiesta Privada</option>
+                <option value="empresarial">Empresarial</option>
+              </select>
+
+              <label for="servicio">Servicio:</label>
+              <input
+                type="radio"
+                id="bartender"
+                name="servicio"
+                value="bartender"
+                required
+              />
+              <label for="bartender">Bartender</label>
+              <input
+                type="radio"
+                id="barraLibre"
+                name="servicio"
+                value="barraLibre"
+                required
+              />
+              <label for="barraLibre">Barra Libre</label>
+            </div>
+            <div>
+              <label for="dia">Día:</label>
+              <input type="date" id="dia" name="dia" required />
+
+              <label for="hora">Hora:</label>
+              <input type="time" id="hora" name="hora" required />
+            </div>
+
+            <label for="notas">Notas:</label>
+            <textarea id="notas" name="notas"></textarea>
+
+            <input type="submit" value="Enviar" />
+          </form>
+        </section>
+      </main>
+      <footer><p>Hola</p></footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

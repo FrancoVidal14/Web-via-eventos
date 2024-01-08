@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #020202;
+  --white: #ffffff;
+  --charcoal: #19191a;
+  --gray: #373739;
+  --gold: #c9b977;
+  --butter: #ecdda2;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+  .responsive-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .responsive-section {
+    height: auto;
+    justify-content: center;
+  }
+
+  .responsive-text {
+    font-size: 1.5rem;
+  }
+
+  .tarjetas.container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    border: 0.5px #2c2c2c solid;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    padding: 20px 5px 20px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+/* Estilos específicos de secciones y elementos */
+header {
+  height: 14vh;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  z-index: 1;
+  transition: 0.3s ease;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav li {
+  color: var(--white);
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+header img {
+  max-width: 150px;
+  object-position: center;
+}
+
+header .contratar {
+  background: transparent;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: var(--white);
+  border: solid #fff 1px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header .contratar:hover {
+  transition: ease 0.3s;
+  color: var(--black);
+  background: #ffffff;
+  text-decoration: none;
+}
+
+footer {
+  height: 120px;
+  background-color: green;
+}
+
+p {
+  color: var(--white);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: var(--white);
+  font-size: 100px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+h2 {
+  color: var(--gold);
+  font-weight: 300;
+  font-family: "Jost", sans-serif;
+  font-size: 50px;
+  padding: 0.8em;
+}
+
+h3 {
+  color: #d4d4d4;
+  font-size: 20px;
+  margin-bottom: 0.5em;
+}
+
+a {
+  color: inherit; /* Heredar el color del texto del padre (body) */
+  text-decoration: none; /* Quitar el subrayado predeterminado */
+}
+
+a:visited {
+  color: inherit; /* Heredar el color del texto del padre (body) para enlaces visitados */
+}
+
+#inicio {
+  background-image: url("https://images.unsplash.com/photo-1623428454697-08da4a100602?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#servicios {
+  height: 130vh;
+  background-color: var(--black);
+  flex-direction: column;
+  align-items: center;
+}
+
+.tarjetas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.tarjeta {
+  max-width: 300px;
+  height: 450px;
+  border: 0.5px #2c2c2c solid;
+  background: var(--charcoal);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: 200;
+  position: relative; /* Añadido para asegurar posición relativa */
+  font-size: 13px;
+  overflow: hidden;
+}
+
+.tarjeta img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.tarjeta p {
+  font-weight: 400;
+  margin: 1px;
+}
+
+.tarjeta a {
+  margin-top: auto; /* Mover hacia la parte inferior */
+  border-radius: 6px;
+  font-size: 18px;
+  background: transparent;
+  padding: 10px 20px;
+  color: var(--white);
+  border: solid #fff 1px;
+  text-decoration: none;
+  margin-top: auto; /* Mover hacia la parte inferior */
+  font-weight: 600;
+}
+
+.tarjeta a:hover {
+  transition: ease 0.3s;
+  color: var(--black);
+  background: #ffffff;
+  text-decoration: none;
+}
+
+#contacto {
+  background-color: var(--charcoal);
+  height: 70vh;
+}
+
+label {
+  color: var(--white);
+}
