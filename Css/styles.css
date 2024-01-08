@@ -139,7 +139,8 @@ header .contratar:hover {
 
 footer {
   height: 120px;
-  background-color: green;
+  background-color: var(--gold);
+  color: var(--charcoal);
 }
 
 /* Estilos para títulos y texto general */
