@@ -46,7 +46,7 @@ body {
   }
 
   .responsive-text {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .tarjetas.container {
@@ -87,7 +87,7 @@ header {
   align-items: center;
   width: 100%;
   padding: 15px;
-  z-index: 1;
+  z-index: 2;
   transition: 0.3s ease;
 }
 
@@ -161,7 +161,7 @@ p {
 
 h1 {
   color: var(--white);
-  font-size: 100px;
+  font-size: 95px;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
 }
@@ -200,11 +200,49 @@ a:visited {
   justify-content: center;
 }
 
+.arrowScrollDown {
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  z-index: 1;
+  position: absolute;
+  border-width: 0 0.25em 0.25em 0;
+  border-style: solid;
+  animation: scrolldown 1.2s ease-in-out infinite;
+  left: 45, 2%;
+  transform: translateY(0%) rotate(45deg);
+  opacity: 0;
+  border-color: var(--charcoal);
+}
+
+#flecha1 {
+  bottom: 25px;
+}
+
+#flecha2 {
+  bottom: 40px;
+}
+
+@keyframes scrolldown {
+  0% {
+    transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(0%) rotate(45deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(20%) rotate(45deg);
+    opacity: 0.7;
+  }
+}
+
 #sobreNosotros {
   height: auto;
   max-height: 900px;
   width: 100%;
-  padding: 2em;
+  padding: 1.5em;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -227,7 +265,7 @@ a:visited {
 #servicios {
   height: auto;
   min-height: 600px;
-  max-height: 1400px;
+  max-height: 1600px;
   background-color: var(--black);
   flex-direction: column;
   align-items: center;

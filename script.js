@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
             logo.src = "./Imagenes/Logo white.png";
         }
 
-        if(scrollY > 500) {
+        if(scrollY > 450) {
             console.log('Cambiando borde del header');
             header.style.borderBottom = '2px solid var(--butter)'; 
         }
@@ -38,24 +38,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     let elementoParaEliminar = document.querySelector('header nav');
+    let scrollDown1 = document.querySelector('#flecha1')
+    let scrollDown2 = document.querySelector('#flecha2')  
 
     function esDispositivoMovil() {
         return window.innerWidth <= 768; // Puedes ajustar este valor según tus necesidades
     }
+    
+    
 
     function gestionarElementoEnDispositivoMovil() {
         if (elementoParaEliminar) {
             if (esDispositivoMovil()) {
-                // Ocultar el elemento en dispositivos móviles
                 elementoParaEliminar.style.display = 'none';
+                scrollDown1.style.borderColor = 'antiquewhite';
+                scrollDown2.style.borderColor = 'antiquewhite';
+                console.log("Cambio de color el scroll")
             } else {
-                // Mostrar el elemento si la pantalla es lo suficientemente grande
                 elementoParaEliminar.style.display = 'block';
+                scrollDown1.style.borderColor = 'var(--charcoal)';
+                scrollDown2.style.borderColor = 'var(--charcoal)';
+                console.log("Cambio de color el scroll")
             }
         }
     }
 
-    // Llamada inicial
     gestionarElementoEnDispositivoMovil();
 
     // Manejar cambios en el tamaño de la pantalla
