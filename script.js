@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+
     gestionarElementoEnDispositivoMovil();
 
     // Manejar cambios en el tamaño de la pantalla
