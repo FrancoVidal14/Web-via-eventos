@@ -239,8 +239,8 @@ a:visited {
 }
 
 #sobreNosotros {
-  height: auto;
-  max-height: 900px;
+  min-height: 440px;
+  max-height: 600px;
   width: 100%;
   padding: 1.5em;
   display: flex;
@@ -257,7 +257,7 @@ a:visited {
 #sobreNosotros p {
   color: var(--charcoal);
   font-weight: 300;
-  max-width: 500px;
+  max-width: 600px;
   text-align: left;
   justify-content: center;
 }
@@ -270,6 +270,65 @@ a:visited {
   flex-direction: column;
   align-items: center;
   padding: 2em;
+}
+
+#opiniones {
+  background-color: var(--butter);
+  min-height: 50vh;
+  padding: 40px;
+}
+
+#opiniones h2 {
+  color: var(--charcoal);
+}
+
+.snip1533 {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+  font-size: 16px;
+  margin: 35px 10px 10px;
+  max-width: 310px;
+  min-width: 250px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 5px;
+  border-top: 5px solid var(--charcoal);
+  font-family: "Jost", sans-serif;
+}
+
+blockquote p {
+  color: var(--charcoal);
+  font-weight: 500;
+}
+
+.snip1533 *,
+.snip1533 *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.snip1533 figcaption {
+  padding: 13% 10% 12%;
+}
+
+.snip1533 h3 {
+  color: #3c3c3c;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 10px 0 5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.snip1533 h4 {
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.5;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Tarjetas */
@@ -348,23 +407,40 @@ a:visited {
 }
 
 /* Estilos para formularios y campos de entrada */
-label {
+label,
+input,
+select,
+textarea,
+form,
+form input[type="text"],
+form input[type="mail"],
+form input[type="tel"],
+form select,
+form input[type="date"],
+form input[type="time"],
+form textarea,
+form input[type="submit"],
+form div input[type="radio"] {
   color: var(--white);
 }
 
 input,
-select,
-textarea {
-  color: var(--white);
+form select,
+form input[type="text"],
+form input[type="mail"],
+form input[type="tel"],
+form input[type="date"],
+form input[type="time"],
+form textarea {
+  background-color: transparent;
+  margin: 5px;
 }
 
 input {
   height: 30px;
   max-height: 30px;
-  width: 10rem;
-  background-color: transparent;
+  width: 9rem;
   border: 1px gray solid;
-  margin: 5px;
 }
 
 input::placeholder {
@@ -376,10 +452,10 @@ form {
   margin: 0 auto;
 }
 
+form select,
 form input[type="text"],
 form input[type="mail"],
 form input[type="tel"],
-form select,
 form input[type="date"],
 form input[type="time"],
 form textarea {
@@ -387,40 +463,26 @@ form textarea {
   padding: 10px;
   box-sizing: border-box;
   margin-bottom: 10px;
-  background-color: transparent;
 }
 
 form textarea {
   resize: none;
 }
 
-/* Estilos para botones de envío en formularios */
 form input[type="submit"] {
   background-color: var(--charcoal);
   color: var(--butter);
   border: 1px var(--gold) solid;
   padding: 10px 15px;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-/* Estilos específicos para el campo de fecha en algunos navegadores */
-input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-}
-
-/* Estilos específicos para el campo de hora en algunos navegadores */
+input[type="date"]::-webkit-calendar-picker-indicator,
 input[type="time"]::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
 
-/* Estilos para opciones en select */
 select option {
   color: var(--charcoal);
-}
-
-/* Estilos para radio buttons en formularios */
-form div input[type="radio"] {
-  margin-right: 5px;
 }
