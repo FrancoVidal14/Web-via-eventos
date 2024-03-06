@@ -2,23 +2,23 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('scroll', function() {
         let header = document.querySelector('header');
         let liHeader = document.querySelectorAll('li');
-        let contratarnosButton = document.querySelector('#contratarnos');
+        // let contratarnosButton = document.querySelector('#contratarnos');
         let logo = document.getElementById('logo');
         let scrollY = window.scrollY;
 
         console.log('scrollY:', scrollY);
         if (scrollY > 400) {
             console.log('Cambiando estilos y logo');
-            contratarnosButton.classList.remove('contratar');
-            contratarnosButton.classList.add('contratarNegro');
+            // contratarnosButton.classList.remove('contratar');
+            // contratarnosButton.classList.add('contratarNegro');
             header.style.backgroundColor = '#fff';
             liHeader.forEach(function(item){
                 item.style.color = 'black';
             });
             logo.src = "./Imagenes/Logo.png";
         } else {
-            contratarnosButton.classList.remove('contratarNegro');
-            contratarnosButton.classList.add('contratar');
+            // contratarnosButton.classList.remove('contratarNegro');
+            // contratarnosButton.classList.add('contratar');
             header.style.backgroundColor = 'transparent';
             liHeader.forEach(function(item){
                 item.style.color = 'white';
